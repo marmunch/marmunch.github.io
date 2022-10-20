@@ -1,0 +1,262 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #282828;
+}
+
+.site-style {
+    /*font-family: 'Arial Rounded MT';*/
+    background-color: #333;
+    border-radius: 15px;
+    color: white;
+}
+
+.site-style-mini {
+    border-radius: 15px;
+    color: white;
+    background-color: #696969;
+    transition: background 0.5s ease;
+}
+
+.container {
+    margin: auto;
+    width: 70%;
+    padding: 0;
+    border: 0px solid black;
+}
+
+.top-nav-menu-container {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.top-nav-menu-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.top-nav-menu-container li {
+    float: left;
+}
+
+.top-nav-menu-container li a {
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background 0.5s ease;
+}
+
+.top-nav-menu-container li a:hover {
+    background-color: #E66761;
+    transition: background 0.5s ease;
+}
+
+.top-nav-menu-container a {
+    font-size: 1em;
+}
+
+.top-nav-menu-container input[type=text] {
+    color: white;
+    background-color: #333;
+    float: right;
+    padding: 14px 16px;
+    border: none;
+    font-size: 1em;
+}
+
+.top-nav-menu-container img[type=glass] {
+    float: right;
+    border: none;
+    padding: 10px;
+    width: 26px;
+}
+
+.column {
+    float: left;
+}
+
+.box-left {
+    width: 17%;
+    margin-right: 3%;
+}
+
+.box-left div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    text-align: left;
+    transition: background 0.5s ease;
+}
+
+.box-left div:hover {
+    background-color: #E66761;
+    transition: background 0.5s ease;
+}
+
+.box-left div a {
+    color: white;
+    display: block;
+    font-size: 1.2em;
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+.box-left img[type=menu] {
+    float: left;
+    border: none;
+    padding: 17px;
+    padding-right: 13px;
+    width: 18px;
+    height: 18px;
+}
+
+.box-right {
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 25px;
+}
+
+.box-right-info {
+    width: 27.327136%;
+    height: 120px;
+    margin-left: 25px;
+}
+
+.box-right-content {
+    width: 70%;
+}
+
+.profile {
+    position: relative;
+    overflow: hidden;
+    height: 355px;
+    width: 80%;
+    border-radius: 15px;
+}
+
+.backpic {
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+}
+
+.backpic img[type=back] {
+    width: 100%;
+    position: absolute;
+}
+
+.profile-block {
+    height: 85px;
+    display: flex;
+    position: relative;
+    padding: 20px;
+}
+
+.profile-info {
+    padding-left: 181px;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.name {
+    font-size: 2em;
+    margin: 0;
+}
+
+.profile-ava {
+    border: 4px solid #333;
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: -103px;
+    margin-left: 13px;
+}
+
+.profile-ava img[type=profile] {
+    position: relative;
+    height: 140px;
+}
+
+.profile-edit {
+    margin-left: 159px;
+    font-size: 1.2em;
+}
+
+.profile-edit a {
+    transition: background 0.5s ease;
+    text-align: center;
+    padding: 6px 16px;
+    text-decoration: none;
+}
+
+.profile-edit a:hover {
+    background-color: #E66761;
+    transition: background 0.5s ease;
+}
+
+.box-right-media {
+    height: 305px;
+    margin: 15px;
+    font-size: 1.2em;
+}
+
+.box-right-media a {
+    transition: background 0.5s ease;
+    text-align: center;
+    padding: 6px 16px;
+    text-decoration: none;
+}
+
+.box-right-media a:hover {
+    background-color: #E66761;
+    transition: background 0.5s ease;
+}
+
+.overphoto {
+    width: 300px;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.pack-photo {
+    position: absolute;
+    display: flex;
+    width: 531px;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.pack-photo img {
+    position: relative;
+    height: 270px;
+}
+
+.events {
+    margin: 15px;
+    font-size: 1.2em;
+}
+
+.events a {
+    transition: background 0.5s ease;
+    text-align: center;
+    padding: 6px 16px;
+    text-decoration: none;
+}
+
+.events a:hover {
+    background-color: #E66761;
+    transition: background 0.5s ease;
+}
