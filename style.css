@@ -83,13 +83,15 @@ body {
 }
 
 .box-left {
-    width: 17%;
-    margin-right: 3%;
+    width: 15%;
+    border-radius: 15px;
+    color: white;
 }
 
 .box-left div {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 40px;
     text-align: left;
     transition: background 0.5s ease;
@@ -111,21 +113,24 @@ body {
 .box-left img[type=menu] {
     float: left;
     border: none;
-    padding: 17px;
+    padding-left: 13px;
+    padding-top: 13px;
     padding-right: 13px;
     width: 18px;
     height: 18px;
 }
 
 .box-right {
-    width: 80%;
-    margin-left: 20%;
+    width: 85%;
+    margin-left: 15%;
     margin-top: 25px;
 }
 
 .box-right-info {
-    width: 27.327136%;
-    height: 120px;
+    /*display: flex;
+    justify-content: initial;
+    align-content: space-between;*/
+    width: auto;
     margin-left: 25px;
 }
 
@@ -137,7 +142,7 @@ body {
     position: relative;
     overflow: hidden;
     height: 355px;
-    width: 80%;
+    width: 85%;
     border-radius: 15px;
 }
 
@@ -157,6 +162,7 @@ body {
     display: flex;
     position: relative;
     padding: 20px;
+    justify-content: space-between;
 }
 
 .profile-info {
@@ -187,7 +193,6 @@ body {
 }
 
 .profile-edit {
-    margin-left: 159px;
     font-size: 1.2em;
 }
 
@@ -221,18 +226,18 @@ body {
     transition: background 0.5s ease;
 }
 
-.overphoto {
-    width: 300px;
+/*.overphoto {
+    width: 350px;
     height: 270px;
     overflow: hidden;
     border-radius: 15px;
     margin-top: 15px;
-}
+}*/
 
 .pack-photo {
     position: absolute;
     display: flex;
-    width: 531px;
+    width: auto;
     height: 270px;
     overflow: hidden;
     border-radius: 15px;
@@ -245,8 +250,19 @@ body {
 }
 
 .events {
+    height: auto;
     margin: 15px;
     font-size: 1.2em;
+    padding: 10px;
+}
+
+.events img {
+    border: none;
+    padding-left: 17px;
+    padding-top: 20px;
+    padding-right: 10px;
+    width: 30px;
+    height: 30px;
 }
 
 .events a {
@@ -259,4 +275,67 @@ body {
 .events a:hover {
     background-color: #E66761;
     transition: background 0.5s ease;
+}
+
+.event {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+
+.event a {
+    margin-top: 10px;
+    padding: 14px;
+}
+
+.friends {
+    height: auto;
+    margin: 15px;
+    margin-top: 25px;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.friends a {
+    transition: background 0.5s ease;
+    text-align: center;
+    padding: 6px 16px;
+    text-decoration: none;
+}
+
+.friends a:hover {
+    background-color: #E66761;
+    transition: background 0.5s ease;
+}
+
+.friends-block {
+    display: flex;
+    position: relative;
+    padding: 20px;
+}
+
+.friends-ava {
+    border: 4px solid #333;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: -3px;
+}
+
+.friends-ava1 {
+    border: 4px solid #333;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: -3px;
+    margin-left: 80px;
+}
+
+.friends-ava img {
+    position: relative;
+    height: 70px;
 }
