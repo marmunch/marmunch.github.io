@@ -130,12 +130,14 @@ body {
     /*display: flex;
     justify-content: initial;
     align-content: space-between;*/
-    width: auto;
-    margin-left: 25px;
+    float: right;
+    width: 27%;
+    margin-left: auto;
 }
 
 .box-right-content {
     width: 70%;
+    
 }
 
 .profile {
@@ -209,9 +211,11 @@ body {
 }
 
 .box-right-media {
+    width: auto;
     height: 305px;
-    margin: 15px;
     font-size: 1.2em;
+    padding: 10px;
+    padding-top: 15px;
 }
 
 .box-right-media a {
@@ -251,9 +255,9 @@ body {
 
 .events {
     height: auto;
-    margin: 15px;
     font-size: 1.2em;
     padding: 10px;
+    padding-top: 15px;
 }
 
 .events img {
@@ -290,10 +294,10 @@ body {
 
 .friends {
     height: auto;
-    margin: 15px;
     margin-top: 25px;
     font-size: 1.2em;
     padding: 10px;
+    padding-top: 15px;
 }
 
 .friends a {
@@ -309,8 +313,9 @@ body {
 }
 
 .friends-block {
+    width: auto;
     display: flex;
-    position: relative;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
@@ -324,18 +329,6 @@ body {
     margin-top: -3px;
 }
 
-.friends-ava1 {
-    border: 4px solid #333;
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-top: -3px;
-    margin-left: 80px;
-}
-
 .friends-ava img {
-    position: relative;
     height: 70px;
 }
