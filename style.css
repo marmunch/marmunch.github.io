@@ -6,6 +6,8 @@ body {
 
 .site-style {
     /*font-family: 'Arial Rounded MT';*/
+    font-size: 1em;
+    align-items: center;
     background-color: #333;
     border-radius: 15px;
     color: white;
@@ -14,7 +16,7 @@ body {
 .site-style-mini {
     border-radius: 15px;
     color: white;
-    background-color: #696969;
+    background-color: #333;
     transition: background 0.5s ease;
 }
 
@@ -30,6 +32,8 @@ body {
     margin-bottom: 25px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    border-radius: 15px;
 }
 
 .top-nav-menu-container ul {
@@ -37,7 +41,6 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border-radius: 15px;
 }
 
 .top-nav-menu-container li {
@@ -54,7 +57,7 @@ body {
 }
 
 .top-nav-menu-container li a:hover {
-    background-color: #E66761;
+    background-color: #282828;
     transition: background 0.5s ease;
 }
 
@@ -62,23 +65,122 @@ body {
     font-size: 1em;
 }
 
-.top-nav-menu-container input[type=text] {
-    color: white;
-    background-color: #333;
-    float: right;
-    padding: 14px 16px;
-    border: none;
-    font-size: 1em;
-}
-
-.top-nav-menu-container img[type=glass] {
+.top-nav-menu-container img {
     float: right;
     border: none;
     padding: 10px;
     width: 26px;
 }
 
-@media screen and (min-width: 1230px) {
+@media screen and (min-width: 946px) {
+    .top-nav-menu-container input {
+        color: white;
+        background-color: #333;
+        float: right;
+        padding: 14px 16px;
+        border: none;
+        font-size: 1em;
+    }
+
+    .profile-ava {
+        border: 4px solid #333;
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-top: -103px;
+        margin-left: 13px;
+    }
+
+    .profile-ava img {
+        position: relative;
+        height: 140px;
+    }
+
+    .profile-block {
+        height: 85px;
+        display: flex;
+        position: relative;
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .profile-info {
+        padding-left: 181px;
+        font-size: 1.2em;
+    }
+    .name {
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .profile-edit a {
+        transition: background 0.5s ease;
+        text-align: center;
+        padding: 6px 16px;
+        text-decoration: none;
+    }
+
+    .profile-edit a:hover {
+        background-color: #282828;
+        transition: background 0.5s ease;
+    }
+}
+
+@media screen and (max-width: 945px) {
+    .top-nav-menu-container input {
+        display: none;
+    }
+
+    .profile-ava {
+        border: 4px solid #333;
+        position: absolute;
+        width: 96px;
+        height: 96px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-top: -103px;
+        margin-left: 13px;
+    }
+
+    .profile-ava img {
+        position: relative;
+        height: 96px;
+    }
+
+    .profile-block {
+        height: 85px;
+        display: flex;
+        position: relative;
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    .profile-info {
+        padding-left: 10px;
+        font-size: 1.2em;
+    }
+
+    .name {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    .profile-edit a {
+        transition: background 0.5s ease;
+        text-align: center;
+        padding: 6px 16px;
+        text-decoration: none;
+    }
+
+    .profile-edit a:hover {
+        background-color: #282828;
+        transition: background 0.5s ease;
+    }
+}
+
+@media screen and (min-width: 1295px) {
     .box-left {
         float: left;
         width: 15%;
@@ -86,17 +188,10 @@ body {
         color: white;
     }
     .box-left div {
-        border-radius: 15px;
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 40px;
         text-align: left;
-        transition: background 0.5s ease;
-    }
-
-    .box-left div:hover {
-        background-color: #E66761;
-        transition: background 0.5s ease;
     }
 
     .box-left div a {
@@ -114,29 +209,62 @@ body {
         width: 18px;
         height: 18px;
     }
+
+    .profile {
+        position: relative;
+        overflow: hidden;
+        height: auto;
+        width: 85%;
+    }
+
+    .box-right {
+        float: left;
+        width: 85%;
+        margin-left: 15%;
+        margin-top: 25px;
+    }
 }
 
-@media screen and (max-width: 1229px) {
-    box-left {
+@media screen and (max-width: 1294px) {
+    .box-left {
         display: none;
     }
 
-    .box-left div {
-        display: none;
+    .profile {
+        position: relative;
+        overflow: hidden;
+        height: auto;
+        width: 100%;
+    }
+
+    .box-right {
+        float: left;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 25px;
     }
 }
 
-.box-right {
-    float: left;
-    width: 85%;
-    margin-left: 15%;
-    margin-top: 25px;
+.backpic {
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+}
+
+.backpic img {
+    width: 100%;
+    position: absolute;
+}
+
+.profile-edit {
+    font-size: 1.2em;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
 }
 
 .box-right-info {
-    /*display: flex;
-    justify-content: initial;
-    align-content: space-between;*/
     float: right;
     width: 27%;
     margin-left: auto;
@@ -146,76 +274,6 @@ body {
     float: left;
     width: 70%;
     margin: 0;
-}
-
-.profile {
-    position: relative;
-    overflow: hidden;
-    height: 355px;
-    width: 85%;
-    border-radius: 15px;
-}
-
-.backpic {
-    height: 230px;
-    position: relative;
-    overflow: hidden;
-}
-
-.backpic img[type=back] {
-    width: 100%;
-    position: absolute;
-}
-
-.profile-block {
-    height: 85px;
-    display: flex;
-    position: relative;
-    padding: 20px;
-    justify-content: space-between;
-}
-
-.profile-info {
-    padding-left: 181px;
-    font-size: 1.2em;
-    margin: 0;
-}
-
-.name {
-    font-size: 2em;
-    margin: 0;
-}
-
-.profile-ava {
-    border: 4px solid #333;
-    position: absolute;
-    width: 140px;
-    height: 140px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-top: -103px;
-    margin-left: 13px;
-}
-
-.profile-ava img[type=profile] {
-    position: relative;
-    height: 140px;
-}
-
-.profile-edit {
-    font-size: 1.2em;
-}
-
-.profile-edit a {
-    transition: background 0.5s ease;
-    text-align: center;
-    padding: 6px 16px;
-    text-decoration: none;
-}
-
-.profile-edit a:hover {
-    background-color: #E66761;
-    transition: background 0.5s ease;
 }
 
 .box-right-media {
@@ -234,7 +292,7 @@ body {
 }
 
 .box-right-media a:hover {
-    background-color: #E66761;
+    background-color: #282828;
     transition: background 0.5s ease;
 }
 
@@ -243,13 +301,26 @@ body {
     width: auto;
     height: 270px;
     overflow: hidden;
-    border-radius: 15px;
     margin-top: 15px;
 }
 
 .pack-photo img {
     height: 270px;
 }
+
+@media screen and (min-width: 1100px) {
+    .event a[name] {
+        margin-top: 10px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1099px) {
+    .event a[name] {
+        display: none;
+    }
+}
+
 
 .events {
     height: auto;
@@ -275,7 +346,7 @@ body {
 }
 
 .events a:hover {
-    background-color: #E66761;
+    background-color: #282828;
     transition: background 0.5s ease;
 }
 
@@ -287,7 +358,7 @@ body {
 
 .event a {
     margin-top: 10px;
-    padding: 14px;
+    padding: 10px;
 }
 
 .friends {
@@ -306,7 +377,7 @@ body {
 }
 
 .friends a:hover {
-    background-color: #E66761;
+    background-color: #282828;
     transition: background 0.5s ease;
 }
 
