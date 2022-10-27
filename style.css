@@ -218,10 +218,6 @@ body {
         border: 0px solid black;
     }
 
-    .event a {
-        display: none;
-    }
-
     .events {
         height: 79px;
         font-size: 1.2em;
@@ -272,14 +268,14 @@ body {
 }
 
 @media screen and (min-width: 1100px) {
-    .event a[name] {
+    .event a[type=name] {
         margin-top: 10px;
         padding: 10px;
     }
 }
 
 @media screen and (max-width: 1099px) {
-    .event a[name] {
+    .event a[type=name] {
         display: none;
     }
 }
