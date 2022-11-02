@@ -6,11 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyPage</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="top-nav-menu-container site-style">
+
             <ul>
+                <li>
+                    <div class="dropdown">
+                        <button onclick="menuDrop()" class="dropbtn site-style"><img type="more" src="more.png"></button>
+                        <div id="myDropdown" class="dropdown-content site-style">
+                            <a href="#">My Page</a>
+                            <a href="#">News</a>
+                            <a href="#">Messages</a>
+                            <a href="#">Friends</a>
+                            <a href="#">Photo</a>
+                            <a href="#">Music</a>
+                            <a href="#">Video</a>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Calendar</a></li>
                 <li><a href="#">Options</a></li>
@@ -20,6 +38,28 @@
                 <img src="search.png">
                 <input placeholder="Search..">
             </div>
+
+            <script>
+
+                function menuDrop() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+            </script>
+
         </div>
         
         <div class="box-left">
@@ -27,6 +67,7 @@
             <img src="news.png"> <div><a href="#">News</a></div>
             <img src="mess.png"> <div><a href="#">Messages</a></div>
             <img src="friends.png"> <div><a href="#">Friends</a></div>
+            <img src="photo.png"> <div><a href="#">Photo</a></div>
             <img src="music.png"> <div><a href="#">Music</a></div>
             <img src="video.png"> <div><a href="#">Video</a></div>
         </div>
@@ -62,15 +103,23 @@
                         <img src="https://i.pinimg.com/originals/59/c9/57/59c957b12d182ccfba059581590e6cd5.jpg" />
                     </div>
                 </div>
+                <div class="box-right-createw site-style">
+                    <input placeholder="Something new?"> <img src="write.png">
+                    <img type="right" src="photo.png">
+                    <img type="right" src="music.png">
+                    <img type="right" src="video.png">
+                    <img type="more" src="more.png">
+                </div>
                 <div class="box-right-wall site-style">
-
+                    <div class="friends-ava"><img src="https://static.wikia.nocookie.net/evangelion/images/c/ca/26_C343_shinji-grin.jpg/revision/latest?cb=20171008122659&path-prefix=ru"></div>
+                    <a href="#" class="site-style-mini">Shinji Ikari</a>
                 </div>
             </div>
             <div class="box-right-info">
                 <div class="events site-style">
                     <a href="#" class="site-style-mini">Events</a>
                     <div class="event">
-                        <img src="event.png" /> <a href="#" type="name" class="site-style">Birthday party</a> <a href="#" type="date" class="site-style">9.12 (Dec)</a>
+                        <img src="event.png" /> <a href="#" type="name" class="site-style">Birthday party</a> <a href="#" type="date" class="site-style">9.12</a>
                     </div>
                 </div>
                 <div class="friends site-style">
