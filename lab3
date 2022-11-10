@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="hidden" id="rowCount" value="0" />
+    <button onclick="createTable()">создать таблицу</button>
+    <button onclick="addRow()">добавить строку</button>
+    <button onclick="removeRow()">удалить строку</button>
+    <input type="number" id="rowToDeleteNumber" min="1" required />
+ 
+    <div id="container"></div>
+    <script>
+        function createTable() {
+            const table = document.createElement("table");
+            table.setAttribute("id", "mytable");
+            document.getElementById("container").appendChild(table);
+        }
+ 
+        function addRowCount() {
+            const rowCountInput = document.getElementById("rowCount");
+            const newRowCount = parseInt(rowCountInput.value) + 1;
+            rowCountInput.value = newRowCount;
+            return newRowCount;
+        }
+ 
+        function addRow() {
+ 
+            const table = document.getElementById("mytable");
+            const rowNum = addRowCount();
+            const row = document.createElement("tr");
+            row.setAttribute("id", "num-" + rowNum);
+ 
+            const tdNum = document.createElement("td");
+            tdNum.innerText = rowNum;
+ 
+            const tdVal = document.createElement("td");
+            tdVal.innerText = "value";
+ 
+            row.appendChild(tdNum);
+            row.appendChild(tdVal);
+ 
+            table.appendChild(row);
+        }
+ 
+        function removeRow() {
+            const numberToRemove = document.getElementById("rowToDeleteNumber").value   ;
+            document.getElementById("num-" + numberToRemove).remove();
+        }
+    </script>
+</body>
+</html>
