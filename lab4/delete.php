@@ -16,5 +16,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
     
     $xml->saveXML('data.xml');
-    //header('location:update.php');
+    header('location:update.php');
 }
