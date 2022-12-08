@@ -1,0 +1,163 @@
+<?php
+
+$xml = simplexml_load_file("data.xml") or die("Error: Cannot create object");
+$id = $_GET['id'];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="top-nav-menu-container site-style">
+
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <button onclick="menuDrop()" class="dropbtn site-style"><img type="more" src="images/more.png"></button>
+                        <div id="myDropdown" class="dropdown-content site-style">
+                            <a href="#">My Page</a>
+                            <a href="#">News</a>
+                            <a href="#">Messages</a>
+                            <a href="#">Friends</a>
+                            <a href="#">Photo</a>
+                            <a href="#">Music</a>
+                            <a href="#">Video</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Options</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="log_out.php?id=<?= $id ?>">Выйти</a></li>
+            </ul>
+            <div>
+                <img src="images/search.png">
+                <input placeholder="Search..">
+            </div>
+
+            <script>
+
+                function menuDrop() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+            </script>
+
+        </div>
+        
+        <div class="box-left">
+            <img src="images/human.png"> <div><a href="#">My Page</a></div>
+            <img src="images/news.png"> <div><a href="#">News</a></div>
+            <img src="images/mess.png"> <div><a href="#">Messages</a></div>
+            <img src="images/friends.png"> <div><a href="#">Friends</a></div>
+            <img src="images/photo.png"> <div><a href="#">Photo</a></div>
+            <img src="images/music.png"> <div><a href="#">Music</a></div>
+            <img src="images/video.png"> <div><a href="#">Video</a></div>
+        </div>
+
+        <div class="profile site-style">
+            <div class="backpic site-style">
+                <img src="https://wallpaper.dog/large/20501808.jpg" />
+            </div>
+            <div class="profile-block">
+                <div class="profile-ava"><img type="profile" src="images/avatar.jpg"></div>
+                <div class="profile-info">
+
+                    <?php
+                        $id = $_GET['id'];
+                    ?>
+                    <input type="hidden" value="<?= $id ?>" name="id"/>
+                    <?php
+
+                        foreach ($xml->item as $item) {
+                            if ($item['id'] == $id) {
+                    ?>
+                                <h2 class="name"><?= $item->name ?></h2>
+                                <div><?= $item->status ?></div>
+                                <div><?= $item-> workplace?></div>
+                    <?php
+                            }
+                        }
+
+                    ?>
+
+                </div>
+                <div class="profile-edit site-style">
+                    <a href="update.php?id=<?= $id ?>" class="site-style-mini">Edit</a>
+                    <a href="#" class="site-style-mini">More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-right">
+            <div class="box-right-content">
+                <div class="box-right-media site-style">
+                    <a href="#" class="site-style-mini">Photos</a>
+                    <a href="#" class="site-style-mini">Videos</a>
+                    <a href="#" class="site-style-mini">Music</a>
+                    <div class="pack-photo site-style">
+                        <img src="https://i.pinimg.com/736x/b5/dc/7d/b5dc7d3f4c9a4228d9848fbddd9cb4f3.jpg" />
+                        <img src="https://cdn-eu.anidb.net/images/main/14311.jpg" />
+                        <img src="https://i.pinimg.com/736x/2e/3d/75/2e3d75272f2f574786ca8d9dc1c977bc.jpg" />
+                        <img src="https://i.pinimg.com/originals/59/c9/57/59c957b12d182ccfba059581590e6cd5.jpg" />
+                    </div>
+                </div>
+                <div class="box-right-createw site-style">
+                    <input placeholder="Something new?"> <img src="images/write.png">
+                    <img type="right" src="images/photo.png">
+                    <img type="right" src="images/music.png">
+                    <img type="right" src="images/video.png">
+                    <img type="more" src="images/more.png">
+                </div>
+                <div class="box-right-wall site-style post">
+                    <div class="friends-ava"><img src="https://static.wikia.nocookie.net/evangelion/images/c/ca/26_C343_shinji-grin.jpg/revision/latest?cb=20171008122659&path-prefix=ru"></div>
+                    <a href="#" class="site-style-mini">Shinji Ikari</a>
+                </div>
+            </div>
+            <div class="box-right-info">
+                <div class="events site-style">
+                    <a href="#" class="site-style-mini">Events</a>
+                    <div class="event">
+                        <img src="images/event.png" /> <a href="#" type="name" class="site-style">Birthday party</a> <a href="#" type="date" class="site-style">9.12</a>
+                    </div>
+                </div>
+                <div class="friends site-style">
+                    <a href="#" class="site-style-mini">Friends</a>
+                    <div class="friends-block">
+                        <div class="friends-ava"><img src="https://static.wikia.nocookie.net/evangelion/images/c/ca/26_C343_shinji-grin.jpg/revision/latest?cb=20171008122659&path-prefix=ru"></div>
+                        <div class="friends-ava"><img src="https://static.wikia.nocookie.net/evangelion/images/0/0d/OP_C016_rei.jpg/revision/latest?cb=20171121184144&path-prefix=ru"></div>
+                        <div class="friends-ava"><img src="https://i.pinimg.com/originals/57/e9/d0/57e9d0fd5e440f45d3ed4151d592dcec.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
