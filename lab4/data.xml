@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <item id="1">
+        <name>Имя пользователя - 1</name>
+        <password>1234</password>
+        <status>Статус - 1</status>
+        <workplace>Место работы - 1</workplace>
+        <online>1</online>
+    </item>
+<item id="2"><workplace>12</workplace><name>12</name><password>12</password><status>12</status><online>0</online></item></items>
