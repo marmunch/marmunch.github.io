@@ -1,10 +1,11 @@
 <?php
 
 $conn = new mysqli("localhost", "root", "", "social_site");
-        if($conn->connect_error){
-            die("Ошибка: " . $conn->connect_error);
-        }
+if($conn->connect_error){
+    die("Ошибка: " . $conn->connect_error);
+}
 
+$userid = $conn->real_escape_string($_GET["id"]);
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +44,7 @@ $conn = new mysqli("localhost", "root", "", "social_site");
                 <li><a href="#">Calendar</a></li>
                 <li><a href="#">Options</a></li>
                 <li><a href="#">Help</a></li>
-                <li><a href="log_out.php?id=<?= $id ?>">Выйти</a></li>
+                <li><a href="log_out.php?id=<?= $userid ?>">Выйти</a></li>
             </ul>
             <div>
                 <img src="images/search.png">
@@ -94,7 +95,6 @@ $conn = new mysqli("localhost", "root", "", "social_site");
                     <input type="hidden" value="<?= $id ?>" name="id"/>
                     <?php
 
-                        $userid = $conn->real_escape_string($_GET["id"]);
                         $sql = "SELECT * FROM account WHERE id = '$userid'";
 
                         if($result = $conn->query($sql)){
